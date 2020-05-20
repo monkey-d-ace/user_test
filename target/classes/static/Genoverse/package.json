@@ -1,0 +1,34 @@
+{
+  "name": "genoverse",
+  "version": "3.0.0",
+  "description": "Genoverse is a portable, customizable, back-end independent JavaScript and HTML5 based genome browser which allows the user to explore data in a dynamic and interactive manner.",
+  "main": "js/Genoverse.js",
+  "directories": {
+    "lib": "js",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha $(find test/require/*.js -print0 | xargs -r0 -I {} echo -n '--require {} ') --no-timeouts --recursive",
+    "build": "node utils/makeExpanded.js; webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtsi-web/Genoverse.git"
+  },
+  "author": "Simon Brent",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/wtsi-web/Genoverse/issues"
+  },
+  "homepage": "http://wtsi-web.github.io/Genoverse/",
+  "devDependencies": {
+    "canvas": "^2.6.1",
+    "chai": "^4.2.0",
+    "jsdom": "^16.2.2",
+    "mocha": "^7.1.1",
+    "request": "^2.88.2",
+    "sinon": "^9.0.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
